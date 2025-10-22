@@ -1,0 +1,97 @@
+# MkDocs configuration for Vela Brasil community
+site_name: Vela Brasil — Comunidade de Velejadores
+site_description: Regras, grupos, como funciona e como contribuir com a comunidade Vela Brasil.
+site_url: https://velabrasil.github.io/comunidade
+repo_url: https://github.com/velabrasil/comunidade
+repo_name: velabrasil/comunidade
+edit_uri: edit/main/docs/
+
+use_directory_urls: true
+
+theme:
+  name: material
+  language: pt-BR
+  logo: assets/img/logo-vela-brasil.png
+  favicon: assets/img/favicon.png
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - scheme: default
+      primary: green
+      accent: yellow
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - content.code.copy
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+
+nav:
+  - Início: index.md
+  - Regras da Comunidade: regras.md
+  - Como Funciona: como-funciona.md
+  - Governança & Moderação: governanca-moderacao.md
+  - Grupos:
+      - Boas-Vindas: grupos/boas-vindas.md
+      - Vela Esportiva: grupos/vela-esportiva.md
+      - Vela de Cruzeiro: grupos/vela-de-cruzeiro.md
+      - Rigging & Aparelhamento: grupos/rigging-aparelhamento.md
+      - Mecânica Naval: grupos/mecanica-naval.md
+      - Elétrica & Eletrônica Naval: grupos/eletrica-eletronica-naval.md
+      - Pintura & Laminação: grupos/pintura-laminacao.md
+      - Cursos, Aulas & Material Didático: grupos/cursos-aulas-material.md
+      - Navegação (Spots & Routing): grupos/navegacao.md
+      - Meteorologia: grupos/meteorologia.md
+      - Salvatagem & Segurança: grupos/salvatagem-seguranca.md
+      - Brechó (Usados): grupos/brecho.md
+      - Comercial & Serviços: grupos/comercial-servicos.md
+  - Contribuir:
+      - Como Melhorar o Fórum: contribuir/como-melhorar.md
+      - Guia de Estilo de Postagens: contribuir/guia-estilo.md
+      - Código de Conduta: contribuir/codigo-de-conduta.md
+  - FAQ: faq.md
+  - Contato: contato.md
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+      type: timeago
+      locale: pt_BR
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      title: Nesta página
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/whatsapp
+      link: https://chat.whatsapp.com/GxWJfMXvQ98CVfRmPUdYGZ
+      name: Grupo Boas-Vindas
+    - icon: fontawesome/solid/link
+      link: https://shorturl.at/DaWwZ
+      name: Solicitar novo grupo
+  generator: false
+
+extra_css:
+  - assets/css/extra.css
